@@ -25,7 +25,7 @@ view.addSubview(greenView)
 let yellowView = UIView(frame: CGRectZero)
 yellowView.backgroundColor = UIColor(red: 1.0, green: (235.0/255.0), blue: (54.0/255.0), alpha: 1.0)
 
-let yellowViewConstraints: [NSLayoutConstraint] = [
+let yellowViewConstraints = [
     NSLayoutConstraint(item: yellowView, attribute: .Top, relatedBy: .Equal, toItem: greenView, attribute: .CenterY, multiplier: 1.0, constant: 3.0),
     NSLayoutConstraint(item: yellowView, attribute: .Right, relatedBy: .Equal, toItem: greenView, attribute: .Right, multiplier: 1.0, constant: -10.0),
     NSLayoutConstraint(item: yellowView, attribute: .Bottom, relatedBy: .Equal, toItem: greenView, attribute: .Bottom, multiplier: 1.0, constant: -10.0),
@@ -47,7 +47,7 @@ greenView.addConstraints(yellowViewConstraints)
 let orangeView = UIView(frame: CGRectZero)
 orangeView.backgroundColor = UIColor(red: 1.0, green: (124.0/255), blue: 0, alpha: 1.0)
 
-let orangeViewConstraints: [NSLayoutConstraint] = [
+let orangeViewConstraints = [
     NSLayoutConstraint(item: orangeView, attribute: .Top, relatedBy: .Equal, toItem: greenView, attribute: .Top, multiplier: 1.0, constant: 10.0),
     NSLayoutConstraint(item: orangeView, attribute: .Right, relatedBy: .Equal, toItem: greenView, attribute: .Right, multiplier: 1.0, constant: -10.0),
     NSLayoutConstraint(item: orangeView, attribute: .Bottom, relatedBy: .Equal, toItem: greenView, attribute: .CenterY, multiplier: 1.0, constant: -3.0),
@@ -63,16 +63,16 @@ greenView.addConstraints(orangeViewConstraints)
 
 //Top related to green's top: 10.0
 //Right related to Orange's left: -6.0
-//Bottom related to green's center Y: -6.0
+//Bottom related to green's center Y: -3.0
 //Left related to green's left: 10.0
 
 let blueView = UIView(frame: CGRectZero)
 blueView.backgroundColor = UIColor(red: (107.0/255.0), green: (215.0/255), blue: 1.0, alpha: 1.0)
 
-let blueViewConstraints: [NSLayoutConstraint] = [
+let blueViewConstraints = [
     NSLayoutConstraint(item: blueView, attribute: .Top, relatedBy: .Equal, toItem: greenView, attribute: .Top, multiplier: 1.0, constant: 10.0),
     NSLayoutConstraint(item: blueView, attribute: .Right, relatedBy: .Equal, toItem: orangeView, attribute: .Left, multiplier: 1.0, constant: -6.0),
-    NSLayoutConstraint(item: blueView, attribute: .Bottom, relatedBy: .Equal, toItem: greenView, attribute: .CenterY, multiplier: 1.0, constant: -6.0),
+    NSLayoutConstraint(item: blueView, attribute: .Bottom, relatedBy: .Equal, toItem: greenView, attribute: .CenterY, multiplier: 1.0, constant: -3.0),
     NSLayoutConstraint(item: blueView, attribute: .Left, relatedBy: .Equal, toItem: greenView, attribute: .Left, multiplier: 1.0, constant: 10.0)
 ]
 
